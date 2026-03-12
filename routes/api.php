@@ -18,6 +18,8 @@ Route::get('/soma',[TestController::class,'soma']);
 
 
 
+//tentativa de deixar o perfil sem o id na barra de pesquisa
+//Route::post('/compara_usuario',[UsuarioController::class,'compara_usuario']);
 
 
 //login e cadastro//

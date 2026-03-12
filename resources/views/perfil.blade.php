@@ -941,6 +941,54 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    //função ajax que busque o token na tabela do banco e compare com o id do usuario para trazer suas informações//
+
+
+
+    <script>
+    $(document).ready(function(){
+
+    alert("TO FUNFANDOOOOOO");
+    
+        var token = $.cookie('token');
+
+    $("#meu").click(function(){
+
+        $.ajax({
+            url: "../api/compara_usuario" ,
+            method: "GET",
+            data: { 
+
+                $token = ToukeUser::where('token', $request->token)->get()->first()
+                token: token
+
+                numero: $("#numero").val() ,
+                nome: $("#nome").val() ,
+                telefone: $("#telefone").val() ,
+                nascimento: $("#nasimento").val() ,
+                genero: $("#genero").val() ,
+                senha: $("#senha").val(),
+                email : $("#email").val() ,
+             },
+
+            success: function (res) {
+
+                ($request ->has('token'))
+                 
+
+                alert("salvado cria")
+            },
+
+            
+
+        });
+
+    });
+
+
+
+});
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Atualizar ano no footer
